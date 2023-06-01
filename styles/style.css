@@ -1,0 +1,153 @@
+.page {
+  font-family: 'SteelfishRg', 'Arial', sans-serif;
+  background-image: url(../img/фон.jpg);
+  background-size: contain;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 60px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.header {
+  padding-top: 20px;
+  height: 100vh;
+}
+
+.header__logo {
+  background-image: url(../img/logo.png);
+  background-size: cover;
+  width: 300px;
+  height: 107px;
+  margin: 0 auto;
+}
+
+.header__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.header__title {
+  font-weight: 700;
+  font-size: 120px;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .header__title {
+    font-size: 70px;
+  }
+}
+
+.video {
+  padding: 100px 100px;
+}
+
+@media screen and (max-width: 1100px) {
+  .video {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .video {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .video {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+.video__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video__title {
+  text-align: center;
+  font-size: 96px;
+}
+
+@media screen and (max-width: 768px) {
+  .video__title {
+    font-size: 72px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .video__title {
+    font-size: 54px;
+  }
+}
+
+.video__item {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.info {
+  position: relative;
+  padding-bottom: 200px;
+}
+
+.info__line {
+  width: 50%;
+  border-top: 2px solid black;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: rotate(45deg);
+  /* transform: translate(-30%, -30%); */
+}
+
+.info__content {
+  display: flex;
+  justify-content: space-between;
+  height: 500px;
+  align-items: flex-start;
+  font-size: 72px;
+}
+
+@media screen and (max-width: 768px) {
+  .info__content {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info__content {
+    font-size: 54px;
+  }
+}
+
+
+.info__text_animation {
+  align-self: flex-end;
+}
+
+
+.carousel {
+  margin: 0 auto;
+}
+
+.fa {
+  width: 50px;
+  color: rgba(3, 3, 3, 0.7);
+  margin: 30px 0;
+  font-size: 40px;
+}
+

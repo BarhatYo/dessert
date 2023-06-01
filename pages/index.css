@@ -1,0 +1,5 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/fonts.css);
+@import url(../styles/style.css);
+@import url(../styles/carousel/owl.carousel.min.css);
+@import url(../styles/carousel/owl.theme.default.min.css);
