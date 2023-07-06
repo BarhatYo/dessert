@@ -294,6 +294,7 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 30px;
+  align-items: flex-end;
 }
 
 .footer__logo {
