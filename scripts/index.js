@@ -6,9 +6,11 @@ $(document).ready(function(){
     margin: 10,
     nav: true,
     autoplay: true,
-    autoplayTimeout: 5000,
+    autoplayTimeout: 4000,
     autoplayHoverPause: true,
     dots: false,
+    touchDrag: true,
+    mouseDrag: true,
     navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
     responsive:{
       0:{
@@ -29,8 +31,6 @@ $(document).ready(function(){
 
 var phoneMask = IMask(
   document.getElementById('phone-mask'), {
-    mask: '+{7}(000)000-00-00'
+    mask: '+{7} (000) 000-00-00'
   });
-
-  console.log(phoneMask);
 

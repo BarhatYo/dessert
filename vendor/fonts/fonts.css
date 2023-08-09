@@ -15,3 +15,12 @@
   src: url(./SteelfishRg-Bold.woff) format("woff"),
        url(./SteelfishRg-Bold.woff2) format("woff2");
 }
+
+@font-face {
+  font-family: 'DelaGothicOne-Regular';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./DelaGothicOne-Regular.woff) format("woff"),
+       url(./DelaGothicOne-Regular.woff2) format("woff2");
+}

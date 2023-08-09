@@ -1,43 +1,19 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Получение данных из формы
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $name = $_POST['name'];
-  $email = $_POST['email'];
+  $company = $_POST['company'];
   $phone = $_POST['phone'];
-  $query = $_POST['query'];
 
-  // Проверка валидности email и телефона
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "Неправильный формат email.";
-    exit();
-  }
+  // Отправка данных на почтовый адрес
+  $to = 'Dessert.agency@mail.ru';
+  $subject = 'Новая заявка с формы';
+  $message = "Имя: $name\nКомпания: $company\nТелефон: $phone";
+  $headers = "From: Dessert.agency@mail.ru";
 
-  if (!preg_match("/^\+7\d{10}$/", $phone)) {
-    echo "Неправильный формат телефона.";
-    exit();
-  }
+  mail($to, $subject, $message, $headers);
 
-  // Адрес электронной почты для отправки данных
-  $to = "your-email@example.com";
-
-  // Заголовок письма
-  $subject = "Форма обратной связи";
-
-  // Тело письма
-  $message = "Имя: $name\n";
-  $message .= "Email: $email\n";
-  $message .= "Телефон: $phone\n";
-  $message .= "Запрос: $query\n";
-
-  // Дополнительные заголовки
-  $headers = "From: $email" . "\r\n";
-  $headers .= "Reply-To: $email" . "\r\n";
-
-  // Отправка письма
-  if (mail($to, $subject, $message, $headers)) {
-    echo "Спасибо! Ваше сообщение было успешно отправлено.";
-  } else {
-    echo "Произошла ошибка при отправке сообщения.";
-  }
+  // Перенаправление на страницу "Спасибо" или другую страницу
+  header('Location: thanks.html');
+  exit;
 }
 ?>
